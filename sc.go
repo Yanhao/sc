@@ -3,13 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/codegen"
-	"github.com/sonald/sc/parser"
-	"github.com/sonald/sc/sema"
-	"llvm.org/llvm/bindings/go/llvm"
 	"os"
 	"path"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/codegen"
+	"github.com/yanhao/sc/parser"
+	"github.com/yanhao/sc/sema"
+
+	llvm "tinygo.org/x/go-llvm"
 )
 
 var (
@@ -78,7 +80,7 @@ func parse(opts *parser.ParseOption) bool {
 	var machine = target.CreateTargetMachine(llvm.DefaultTargetTriple(), "generic", "",
 		llvm.CodeGenLevelNone, llvm.RelocDefault, llvm.CodeModelDefault)
 
-	var td = machine.TargetData()
+	var td = machine.CreateTargetData()
 	mod.SetDataLayout(td.String())
 	mod.SetTarget(target.Name())
 	defer machine.Dispose()

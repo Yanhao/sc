@@ -2,11 +2,12 @@ package sema
 
 import (
 	"flag"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/parser"
 	"os"
 	"strings"
 	"testing"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/parser"
 )
 
 func testTemplate(t *testing.T, text string) (ast.Ast, *parser.Parser) {

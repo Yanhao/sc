@@ -2,14 +2,15 @@ package parser
 
 import (
 	"fmt"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/lexer"
-	"github.com/sonald/sc/util"
 	"io"
 	"math/rand"
 	"reflect"
 	"runtime"
 	"strings"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/lexer"
+	"github.com/yanhao/sc/util"
 )
 
 //maximum lookaheads

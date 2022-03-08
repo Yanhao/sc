@@ -4,3 +4,4 @@ pkg
 *~
 *.swp
 .zcache
+*.md.tmp

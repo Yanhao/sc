@@ -2,11 +2,13 @@ package codegen
 
 import (
 	"fmt"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/lexer"
-	"github.com/sonald/sc/util"
-	"llvm.org/llvm/bindings/go/llvm"
 	"os"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/lexer"
+	"github.com/yanhao/sc/util"
+
+	llvm "tinygo.org/x/go-llvm"
 )
 
 func MakeLLVMCodeGen() ast.AstWalker {

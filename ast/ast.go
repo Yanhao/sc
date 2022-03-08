@@ -3,8 +3,9 @@ package ast
 
 import (
 	"fmt"
-	"github.com/sonald/sc/lexer"
 	"reflect"
+
+	"github.com/yanhao/sc/lexer"
 )
 
 type Ast interface {

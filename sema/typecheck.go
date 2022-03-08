@@ -2,11 +2,12 @@ package sema
 
 import (
 	"fmt"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/lexer"
-	"github.com/sonald/sc/util"
 	"reflect"
 	"sort"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/lexer"
+	"github.com/yanhao/sc/util"
 )
 
 var (

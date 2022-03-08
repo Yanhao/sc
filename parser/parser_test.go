@@ -2,10 +2,11 @@ package parser
 
 import (
 	"flag"
-	a "github.com/sonald/sc/ast"
 	"os"
 	"strings"
 	"testing"
+
+	a "github.com/yanhao/sc/ast"
 )
 
 func testTemplate(t *testing.T, text string) a.Ast {

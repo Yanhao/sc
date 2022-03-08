@@ -2,14 +2,16 @@ package codegen
 
 import (
 	"flag"
-	"github.com/sonald/sc/ast"
-	"github.com/sonald/sc/parser"
-	"github.com/sonald/sc/sema"
-	"llvm.org/llvm/bindings/go/llvm"
 	"os"
 	"strings"
 	"testing"
 	"unsafe"
+
+	"github.com/yanhao/sc/ast"
+	"github.com/yanhao/sc/parser"
+	"github.com/yanhao/sc/sema"
+
+	llvm "tinygo.org/x/go-llvm"
 )
 
 func testTemplate(t *testing.T, text string, args []llvm.GenericValue, expect uint64,
